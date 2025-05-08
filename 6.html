@@ -6,18 +6,18 @@
     <title>미니실습 개인사진첩, 상품사진</title>
 </head>
 <body>
-    <h1 id="box_inline"><a href="index.html">WEB</a></h1>
-    <div>
-    <ol>
-        <li><a href="1.html">HTML</a></li>
-        <li><a href="2.html">CSS</a></li>
-        <li><a href="3.html">JavaScript</a></li>
-        <li><a href="4.html">자기소개</a></li>
-        <li><a href="5.html">자기소개 미니실습</a></li>
-        <li><a href="6.html">사진 미니실습</a></li>
-        </ol>
-    </div>
     <style>
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        #grid > ol {
+            border-right: 1px solid gray;
+            width: 100px;
+            margin-left: 20px;
+            margin-top: 0;
+            padding: 20px;
+        }
         .galley{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -45,7 +45,8 @@
         h1{
             font-size: 50px;
             text-align: center;
-            margin-top: 0;
+            margin: 0;
+            border-bottom: 1px solid gray;
         }
         h2{
             font-size: 20px;
@@ -60,24 +61,42 @@
             margin-bottom: 10px;
             border: 2px dotted green;
         }
+        #article{
+            padding-left: 200px;
+        }
     </style>
-    <h2>개인사진첩</h2>
-<div class="galley">
-    <div><img src="img/사진첩1.jpg" alt="사진첩1"></div>
-    <div><img src="img/사진첩2.jpg" alt="사진첩2"></div>
-    <div><img src="img/사진첩3.jpg" alt="사진첩3"></div>
-    <div><img src="img/사진첩4.jpg" alt="사진첩4"></div>
-    <div><img src="img/사진첩5.jpg" alt="사진첩5"></div>
-    <div><img src="img/사진첩6.jpg" alt="사진첩6"></div>
-</div>
-<h3>상품사진</h3>
-<div class="galley2">
-    <div><img src="img/상품사진1.jpg" alt="상품사진1"></div>
-    <div><img src="img/상품사진2.jpg" alt="상품사진2"></div>
-    <div><img src="img/상품사진3.jpg" alt="상품사진3"></div>
-    <div><img src="img/상품사진4.jpg" alt="상품사진4"></div>
-    <div><img src="img/상품사진5.jpg" alt="상품사진5"></div>
-    <div><img src="img/상품사진6.jpg" alt="상품사진6"></div>
-</div>
+    <h1 id="box_inline"><a href="index.html">WEB</a></h1>
+    <div id="grid">
+    <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+        <li><a href="4.html">자기소개</a></li>
+        <li><a href="5.html">자기소개 미니실습</a></li>
+        <li><a href="6.html">사진 미니실습</a></li>
+        </ol>
+        <div id="article">
+            <h2>개인사진첩</h2>
+        <div class="galley">
+            <div><img src="img/사진첩1.jpg" alt="사진첩1"></div>
+            <div><img src="img/사진첩2.jpg" alt="사진첩2"></div>
+            <div><img src="img/사진첩3.jpg" alt="사진첩3"></div>
+            <div><img src="img/사진첩4.jpg" alt="사진첩4"></div>
+            <div><img src="img/사진첩5.jpg" alt="사진첩5"></div>
+            <div><img src="img/사진첩6.jpg" alt="사진첩6"></div>
+        </div>
+        <h3>상품사진</h3>
+        <div class="galley2">
+            <div><img src="img/상품사진1.jpg" alt="상품사진1"></div>
+            <div><img src="img/상품사진2.jpg" alt="상품사진2"></div>
+            <div><img src="img/상품사진3.jpg" alt="상품사진3"></div>
+            <div><img src="img/상품사진4.jpg" alt="상품사진4"></div>
+            <div><img src="img/상품사진5.jpg" alt="상품사진5"></div>
+            <div><img src="img/상품사진6.jpg" alt="상품사진6"></div>
+        </div>
+        </div>
+    </div>
+    
+
 </body>
 </html>
