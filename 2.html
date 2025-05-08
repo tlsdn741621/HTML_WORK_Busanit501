@@ -7,12 +7,45 @@
  <meta charset="utf-8">
  </head>
  <body>
+   <style>
+      #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 45px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            margin: 0;
+        }
+
+        #grid ol {
+            border-right: 1px solid gray;
+            width: 100px;
+            margin-left: 20px;
+            margin-top: 0;
+            padding: 20px;
+
+        }
+
+        #article {
+            padding-left: 25px;
+        }
+   </style>
  <h1><a href="index.html">WEB</a></h1>
+ <div id="grid">
  <ol>
  <li><a href="1.html">HTML</a></li>
  <li><a href="2.html">CSS</a></li>
  <li><a href="3.html">JavaScript</a></li>
+ <li><a href="4.html">자기소개</a></li>
  </ol>
+ <div id="article">
  <h2>CSS란 무엇인가?</h2>
  <p style="margin-top: 40px;">
  Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation 
@@ -24,5 +57,7 @@ and control in the specification of presentation characteristics; enable multipl
 share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity 
 and repetition in the structural content
  </p>
+</div>
+</div>
  </body>
  </html>
