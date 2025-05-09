@@ -110,6 +110,23 @@
             }
         }
 
+        @keyframes fadeSlideOut {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.8) rotate(2deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px) scale(1.05) rotate(-2deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px) scale(1) rotate(0deg);
+            }
+        }
+
         .img-wrapper2 {
             border-radius: 8px;
             padding: 8px;
@@ -141,7 +158,21 @@
 
         .img-wrapper3:hover {
             background-color: white;
-            transform: scale(1.05);
+            transform: scale(0.97);
+        }
+
+        .img-wrapper4 {
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            animation-name: fadeSlideOut;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: both;
+            animation-play-state: running;
         }
     </style>
     <h1 id="box_inline"><a href="index.html">WEB</a></h1>
@@ -168,19 +199,19 @@
             <h3>상품사진</h3>
             <div class="galley2">
                 <div class="img-wrapper3">
-                    <div class="img-wrapper2"><img src="img/상품사진1.jpg" alt="상품사진1"></div>
+                    <div class="img-wrapper4"><img src="img/상품사진1.jpg" alt="상품사진1"></div>
                 </div>
                 <div class="img-wrapper3">
                     <div class="img-wrapper2"><img src="img/상품사진2.jpg" alt="상품사진2"></div>
                 </div>
                 <div class="img-wrapper3">
-                    <div class="img-wrapper2"><img src="img/상품사진3.jpg" alt="상품사진3"></div>
+                    <div class="img-wrapper4"><img src="img/상품사진3.jpg" alt="상품사진3"></div>
                 </div>
                 <div class="img-wrapper3">
                     <div class="img-wrapper2"><img src="img/상품사진4.jpg" alt="상품사진4"></div>
                 </div>
                 <div class="img-wrapper3">
-                    <div class="img-wrapper2"><img src="img/상품사진5.jpg" alt="상품사진5"></div>
+                    <div class="img-wrapper4"><img src="img/상품사진5.jpg" alt="상품사진5"></div>
                 </div>
                 <div class="img-wrapper3">
                     <div class="img-wrapper2"><img src="img/상품사진6.jpg" alt="상품사진6"></div>
