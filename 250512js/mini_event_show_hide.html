@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>이벤트 핸들러 방법 2-4 확인, 추가로 버튼 하나로 조건문 이용해서 구현해보기</h1>
+    <h2>방법2 작업</h2>
+    <input type="button" value="방법2_hide" id="btn_test2_hide">
+    <input type="button" value="방법2_show" id="btn_test2_show">
+
+    <h2>방법3 작업</h2>
+    <input type="button" value="방법3_hide" id="btn_test3_hide">
+    <input type="button" value="방법3_show" id="btn_test3_show">
+
+    <h2>방법4 작업</h2>
+    <input type="button" value="방법4_hide" id="btn_test4_hide">
+    <input type="button" value="방법4_show" id="btn_test4_show">
+
+    <h2>버튼 하나로 show/hide 작업</h2>
+    <input type="button" value="hide" id="toggle_btn">
+
+    <img src="coding.jpg.jpg" width="300px" height="200px" alt="test 이미지" id="test_img">
+    <script>
+        //방법2
+        //숨기기
+        document.getElementById('btn_test2_hide').onclick = function () {
+            document.querySelector('#test_img').style.display = 'none'
+            // 해당 이미지 요소를 display 속성을 이용해서 , 숨기기
+        }
+        //보여주기
+        document.getElementById('btn_test2_show').onclick = function () {
+            document.querySelector('#test_img').style.display = 'block'
+        }
+
+        //방법3
+        //숨기기
+        const btn = document.getElementById('btn_test3_hide')
+        btn.addEventListener('click', function () { document.querySelector('#test_img').style.display = 'none' })
+        //보여주기
+        const btn1 = document.getElementById('btn_test3_show')
+        btn1.addEventListener('click', function () { document.querySelector('#test_img').style.display = 'block' })
+
+        //방법4
+        //기능별 분리
+        const hideClick = () => document.querySelector('#test_img').style.display = 'none'
+        const showClick = () => document.querySelector('#test_img').style.display = 'block'
+        //요소별 버튼 분리, 선택하는 방법들
+        const btn4_hide = document.getElementById('btn_test4_hide')
+        const btn4_show = document.querySelector('#btn_test4_show')
+        //이벤트를 적용하는 방법
+        btn4_hide.addEventListener('click', hideClick)
+        btn4_show.addEventListener('click', showClick)
+
+        //하나의 버튼으로, 스위치 처럼 on/off, show/hide
+        //최초 처음 상태 버튼 : hide 이미지 : 보여짐
+        //버튼 클릭 hide 클릭
+        //2번째 상태 버튼 value : show 이미지 : 안보여짐
+        //3번째 상태 버튼 value : hide 이미지 : 보여짐
+
+        //방법4 1) 버튼 요소 분리 2) 기능 분리
+        const toggleClick = () => {
+            //이미지도 선택, 버튼 선택
+            const img = document.querySelector('#test_img');
+            const toggleBtn = document.getElementById('toggle_btn');
+            //조건문
+            //if (조건문) {조건문 참인 경우 실행될 코드}
+            //else {조건문 거짓인 경우 실행될 코드}
+            //== : 단순 값만 비교
+            //=== : 값과 타입도 비교
+            //예시1) 1 == "1" 값만 비교하니 같음
+            //예시2) 1 === "1" 값은 같음 하지만 타입 다름 숫자 = 문자열 / ""가 붙으면 문자열
+            //현재는 이미지가 안 보이는 상태임
+            //방법2
+            //버튼의 값으로 비교
+            if (img.style.display === 'none') {
+                //이미지가 보이게 변경하는 코드
+                img.style.display = 'block'
+                toggleBtn.value = 'hide'
+            } else {
+                img.style.display = 'none'
+                toggleBtn.value = 'show'
+            }
+        }
+        //위에서 정의한 함수를 이제, 요소를 클릭 할 때마다 실행하게끔 정의
+        const toggleBtn2 = document.getElementById('toggle_btn');
+        toggleBtn2.addEventListener('click', toggleClick)
+    </script>
+</body>
+
+</html>

@@ -14,7 +14,7 @@
     <br>
     <br>
     <img id="sample_img4" src="/img/사진첩5.jpg" alt="샘플이미지4" width="300px" height="200px">
-    
+
     <h2>방법2</h2>
     <input type="button" id="btn1" value="hide">
     <input type="button" id="btn2" value="show">
@@ -35,12 +35,24 @@
     <br>
     <br>
     <img id="sample_img3" src="/img/사진첩4.jpg" alt="샘플이미지3 " width="300px" height="200px">
+
+    <h2>버튼하나 방법1</h2>
+    <input type="button" value="hide/show" onclick="hi3()">
+    <br>
+    <br>
+    <img id="sample_img6" src="/img/상품사진1.jpg" alt="샘플이미지6" width="300px" height="200px">
+    
+    <h2>버튼하나 방법2</h2>
+    <input type="button" id="btn7" value="hide/show">
+    <br>
+    <br>
+    <img id="sample_img5" src="/img/사진첩6.jpg" alt="샘플이미지5" width="300px" height="200px">
     <script>
         //방법1
-        function hi(){
+        function hi() {
             document.querySelector('#sample_img4').style.display = 'none'
         }
-        function hi2(){
+        function hi2() {
             document.querySelector('#sample_img4').style.display = 'block'
         }
 
@@ -52,7 +64,7 @@
         document.getElementById('btn2').onclick = function () {
             document.querySelector('#sample_img1').style.display = 'block'
         }
-        
+
         //방법3
         const btn = document.getElementById('btn3')
         const btn1 = document.getElementById('btn4')
@@ -66,6 +78,20 @@
         const handleClick2 = () => document.querySelector('#sample_img3').style.display = 'block'
         const btn3 = document.getElementById('btn6')
         btn3.addEventListener('click', handleClick2)
+
+        //방법1을 이용한 버튼하나 방법1
+        function hi3() {
+            if (document.querySelector('#sample_img6').style.display === 'none') {document.querySelector('#sample_img6').style.display = 'block';}
+            else {document.querySelector('#sample_img6').style.display = 'none';}
+        }
+
+        //방법3을 이용한 버튼하나 방법2
+        const btn4 = document.getElementById('btn7')
+        const img = document.getElementById('sample_img5')
+        btn4.addEventListener('click', function () {
+            if (img.style.display === 'none') { img.style.display = 'block'; btn4.value = 'hide' }
+            else { img.style.display = 'none'; btn4.value = 'show' }
+        })
     </script>
 </body>
 
