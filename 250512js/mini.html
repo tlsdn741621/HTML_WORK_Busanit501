@@ -41,8 +41,14 @@
     <br>
     <br>
     <img id="sample_img6" src="/img/상품사진1.jpg" alt="샘플이미지6" width="300px" height="200px">
-    
+
     <h2>버튼하나 방법2</h2>
+    <input type="button" id="btn8" value="hide">
+    <br>
+    <br>
+    <img id="sample_img7" src="/img/상품사진2.jpg" alt="샘플이미지7" width="300px" height="200px">
+    
+    <h2>버튼하나 방법3</h2>
     <input type="button" id="btn7" value="hide/show">
     <br>
     <br>
@@ -85,7 +91,12 @@
             else {document.querySelector('#sample_img6').style.display = 'none';}
         }
 
-        //방법3을 이용한 버튼하나 방법2
+        //방법2를 이용한 버튼하나 방법2
+        document.getElementById('btn8').onclick = function () {if (document.querySelector('#sample_img7').style.display === 'none') 
+        {document.querySelector('#sample_img7').style.display = 'block'; btn8.value = 'hide'}
+        else {document.querySelector('#sample_img7').style.display = 'none'; btn8.value = 'show'}}
+
+        //방법3을 이용한 버튼하나 방법3
         const btn4 = document.getElementById('btn7')
         const img = document.getElementById('sample_img5')
         btn4.addEventListener('click', function () {
