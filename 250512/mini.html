@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>방법1</h2>
+    <input type="button" value="hide" onclick="hi()">
+    <input type="button" value="show" onclick="hi2()">
+    <br>
+    <br>
+    <img id="sample_img4" src="/img/사진첩5.jpg" alt="샘플이미지4" width="300px" height="200px">
+    
+    <h2>방법2</h2>
+    <input type="button" id="btn1" value="hide">
+    <input type="button" id="btn2" value="show">
+    <br>
+    <br>
+    <img id="sample_img1" src="/img/사진첩2.jpg" alt="샘플이미지1" width="300px" height="200px">
+
+    <h2>방법3</h2>
+    <input type="button" id="btn3" value="hide">
+    <input type="button" id="btn4" value="show">
+    <br>
+    <br>
+    <img id="sample_img2" src="/img/사진첩3.jpg" alt="샘플이미지2 " width="300px" height="200px">
+
+    <h2>방법4</h2>
+    <input type="button" id="btn5" value="hide">
+    <input type="button" id="btn6" value="show">
+    <br>
+    <br>
+    <img id="sample_img3" src="/img/사진첩4.jpg" alt="샘플이미지3 " width="300px" height="200px">
+    <script>
+        //방법1
+        function hi(){
+            document.querySelector('#sample_img4').style.display = 'none'
+        }
+        function hi2(){
+            document.querySelector('#sample_img4').style.display = 'block'
+        }
+
+
+        //방법2
+        document.getElementById('btn1').onclick = function () {
+            document.querySelector('#sample_img1').style.display = 'none'
+        }
+        document.getElementById('btn2').onclick = function () {
+            document.querySelector('#sample_img1').style.display = 'block'
+        }
+        
+        //방법3
+        const btn = document.getElementById('btn3')
+        const btn1 = document.getElementById('btn4')
+        btn.addEventListener('click', function () { document.querySelector('#sample_img2').style.display = 'none' })
+        btn1.addEventListener('click', function () { document.querySelector('#sample_img2').style.display = 'block' })
+
+        //방법4
+        const handleClick = () => document.querySelector('#sample_img3').style.display = 'none'
+        const btn2 = document.getElementById('btn5')
+        btn2.addEventListener('click', handleClick)
+        const handleClick2 = () => document.querySelector('#sample_img3').style.display = 'block'
+        const btn3 = document.getElementById('btn6')
+        btn3.addEventListener('click', handleClick2)
+    </script>
+</body>
+
+</html>
