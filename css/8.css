@@ -170,6 +170,10 @@ footer {
     border-radius: 10px;
 }
 
+#sideBar > ol {
+    list-style: none;
+}
+
 #sideBar > ol > li {
     line-height: 3.0;
 padding-left: 5px;
