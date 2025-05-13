@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1200px;
+    background-color: #fff;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ헤더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 186, 122);
+}
+
+#logo {
+    float: left;
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 30px;
+}
+
+#logo h1 {
+    font-family: "Dongle";
+    font-weight: 700;
+    font-size: 60px;
+    color: rgb(211, 108, 25);
+    text-shadow: 2px -2px 3px rgb(0, 0, 0);
+}
+
+nav {
+    float: right;
+    width: 900px;
+    height: 100px;
+    padding-top: 20px;
+}
+
+#topMenu {
+    height: 60px;
+}
+
+#topMenu > li {
+    float: left;
+    position: relative;
+}
+
+#topMenu > li > a {
+    display: block;
+    font-size: 1.3em;
+    color: #706464;
+    font-weight: 600;
+    padding: 20px 20px;
+}
+
+#topMenu > li > a:hover {
+    color: #fff;
+    text-shadow: 2px -2px 1px #000;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ본문ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.contents {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 0;
+}
+
+#headline {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d8d8d8;
+}
+#headline:last-child {
+    border: none;
+}
+main > section {
+    margin-top: 60px;
+}
+main h2 {
+    font-size: 1.7em;
+    line-height: 2.0;
+}
+main div {
+    margin-top: 20px;
+}
+main h3 {
+    font-size: 1.2em;
+    line-height: 2.2;
+}
+
+.detail p {
+    line-height: 2.0;
+    color: #222;
+}
+.detail > p {
+    font-family: "Nanum Myeongjo";
+}
+
+.detail > img {
+    width: 30%;
+    height: 190px;
+    float: left;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.schedule h3 {
+    font-size: 1.1em;
+}
+.schedule ul {
+    font-family: "Nanum Myeongjo";
+    list-style: none;
+}
+.schedule ul li {
+    line-height: 1.5;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+footer {
+    width: 1200px;
+    height: 100px;
+    border-top: 2px solid #222;
+}
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+    margin-right: 60px;
+}
+#bottomMenu ul {
+    margin-top: 15px;
+}
+#bottomMenu ul li {
+    float: right;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+}
+#bottomMenu ul li:first-child {
+    border: none;
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ사이드바ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+#sideBar {
+    width: 200px;
+    float: left;
+    padding: 20px;
+    margin-left: 0px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#sideBar > ol > li {
+    line-height: 3.0;
+padding-left: 5px;
+    border-left: 3px solid transparent;
+    transition: 0.2s;
+}
+
+#sideBar > ol > li:hover {
+    color: rgb(255, 95, 95);
+    border-left: 3px solid rgb(255, 95, 95);
+}
+
+#article {
+    margin-left: 50px;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Myeongjo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Myeongjo', serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+헤더
+header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(90deg, rgb(255, 186, 122), rgb(255, 143, 84));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+#logo h1 {
+    font-family: "Dongle", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: rgb(211, 85, 0);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+#topMenu>li>a {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#topMenu>li>a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background-color: #333;
+}
+
+본문 영역
+.contents {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    padding: 30px;
+    gap: 30px;
+}
+
+사이드바
+#sideBar {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#sideBar h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#sideBar>ol>li {
+    line-height: 2.5;
+    padding-left: 5px;
+    border-left: 3px solid transparent;
+    transition: 0.2s;
+}
+
+#sideBar>ol>li:hover {
+    color: rgb(255, 95, 95);
+    border-left: 3px solid rgb(255, 95, 95);
+}
+
+본문 글 영역
+#article section {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+}
+
+#article section:last-child {
+    border-bottom: none;
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.detail {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.detail img {
+    width: 200px;
+    height: 140px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.detail p:first-of-type {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.detail p:last-of-type {
+    color: #555;
+    line-height: 1.8;
+}
+
+.schedule h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.schedule ul li {
+    line-height: 1.6;
+    color: #666;
+    margin-left: 15px;
+}
+
+푸터
+footer {
+    background-color: #333;
+    color: #ddd;
+    padding: 20px 30px;
+}
+
+#bottomMenu ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#bottomMenu ul li {
+    border-right: 1px solid #555;
+    padding-right: 15px;
+}
+
+#bottomMenu ul li:last-child {
+    border: none;
+}
+
+#bottomMenu a {
+    font-size: 14px;
+    color: #ccc;
+}
+
+#bottomMenu a:hover {
+    color: #fff;
+}
+
+반응형 약간만 추가
+@media screen and (max-width: 768px) {
+    #container {
+        width: 100%;
+    }
+
+    .contents {
+        display: block;
+        padding: 15px;
+    }
+
+    #sideBar,
+    #article {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+} */
