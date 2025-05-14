@@ -41,17 +41,23 @@ form {
 }
 
 
-fieldset {
+/* fieldset {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
 }
 
 label {
     display: flex;
     flex-direction: column;
-}
+} */
 
 fieldset {
+    display: flex;
+    /* 요소가 많아도 다음 줄로 자동 줄바꿈 */
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
@@ -90,4 +96,20 @@ button {
     padding: 20px;
     background: #e9ecef;
     border-radius: 6px;
+}
+
+/* 프로필 이미지 모양 꾸미기 */
+#profilePreviewBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#profilePreview {
+    width: 150px;
+    height: 150px;
+    /* 테두리 부분을 동그란 모양으로 만들 때 자주 쓰는 기법 */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
 }
