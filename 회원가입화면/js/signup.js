@@ -7,8 +7,9 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     const hobbies = formData.getAll('hobby')
     output += `출력되는 취미들 : ${hobbies.join(', ')}\n`
     output += `출력되는 성별 : ${formData.get('gender')}\n`
-    output += `출력되는 나이 : ${formData.get('age')}\n`
+    output += `출력되는 이름 : ${formData.get('name')}\n`
     output += `출력되는 생년월일 : ${formData.get('date')}\n`
+    output += `출력되는 전화번호 : ${formData.get('phoneNo')}\n`
     output += `출력되는 이메일 : ${formData.get('email')}\n`
     const file = formData.get('file')
     output += `출력되는 첨부파일명 : ${file && file.name ? file.name : '파일없음'}\n`
