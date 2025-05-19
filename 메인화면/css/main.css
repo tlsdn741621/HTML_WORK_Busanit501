@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,4 +29,348 @@ nav h1 {
     cursor: pointer;
     padding: 10px 10px;
     border-radius: 5px;
+}
+.search {
+    background-color: white;
+    width: 800px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.search input {
+    border: 0;
+    outline: 0;
+    flex: 1;
+    margin-left: 20px;
+}
+.search button {
+    border: 0;
+    background-color: #03c75a;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    cursor: pointer;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    background-color: #f5f6f7;
+    color: #222;
+}
+
+/* 헤더 */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+#logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #03c75a;
+}
+
+.search {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+}
+
+.search input {
+    width: 100%;
+    padding: 14px 50px 14px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.search button {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #03c75a;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 버튼 */
+.button {
+    display: flex;
+    gap: 12px;
+}
+
+.button .login,
+.button .alarm {
+    border: none;
+    padding: 10px 20px;
+    background-color: #03c75a;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.button .alarm i {
+    font-size: 18px;
+}
+
+/* 광고 */
+#add {
+    background-color: #fff;
+    margin: 24px auto;
+    padding: 24px;
+    max-width: 1000px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#add h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.add-img img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* 뉴스 스탠드 & 쇼핑 */
+#newsstand, #shopping {
+    background-color: #fff;
+    margin: 24px auto;
+    padding: 24px;
+    max-width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#newsstand h3,
+#shopping h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+#newsstand button {
+    background-color: #f1f3f5;
+    border: none;
+    padding: 6px 14px;
+    margin: 6px 4px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 쇼핑 */
+.shopping-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.card {
+  width: 220px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card button {
+    background-color: #03c75a;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subject-img {
+  width: 100%;
+  height: 160px; /* 고정 높이 */
+  overflow: hidden;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.subject-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이게 핵심입니다 */
+  border-radius: 6px;
+}
+
+/* 푸터 */
+footer {
+    background-color: #f1f3f5;
+    padding: 40px 20px;
+    font-size: 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-content .col {
+    width: 30%;
+}
+
+.footer-nav li {
+    list-style: none;
+    margin: 8px 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.footer-info p,
+.col p {
+    font-size: 14px;
+    color: #555;
+}
+
+.socials {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.socials i {
+    font-size: 22px;
+    color: #555;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 16px 24px;
+    }
+
+    .search {
+        width: 100%;
+        margin: 0;
+    }
+
+    .button {
+        align-self: flex-end;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-content .col {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 48%;
+    }
+
+    .search input {
+        font-size: 14px;
+        padding: 12px 40px 12px 16px;
+    }
+
+    .search button {
+        font-size: 18px;
+        right: 12px;
+    }
+
+    .button .login,
+    .button .alarm {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        padding: 12px 16px;
+    }
+
+    #logo {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #add h2,
+    #newsstand h3,
+    #shopping h3 {
+        font-size: 18px;
+    }
+
+    .footer-content {
+        padding: 0;
+    }
+
+    .socials i {
+        font-size: 20px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
 }
