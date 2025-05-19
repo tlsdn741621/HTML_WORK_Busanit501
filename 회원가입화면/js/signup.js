@@ -2,7 +2,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(this);
     let output = ""
-    output += `출력되는 유저명 : ${formData.get('username')}\n`
+    output += `출력되는 아이디 : ${formData.get('username')}\n`
     output += `출력되는 패스워드 : ${formData.get('password')}\n`
     const hobbies = formData.getAll('hobby')
     output += `출력되는 취미들 : ${hobbies.join(', ')}\n`
